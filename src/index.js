@@ -443,8 +443,140 @@
 // console.log(monObj1); // {a: 1}
 // console.log(copie); // {a: 2, b: 2}
 
+// const a = {};
+// const b = {};
+// console.log(a === b);
 
+//boucle for avec in, puis Object.keys/objetc.values/object.entries
+// const obj = {
+//     a: "un",
+//     b: "deux",
+//     c: "trois"
+// }
+// for(prop in obj){
+//     console.log(prop);
+//     console.log(obj[prop]);
+// }
 
+// console.log(Object.keys(obj));
+// console.log(Object.values(obj));
+// console.log(Object.entries(obj));
+
+// format json
+
+//avant le json ,nous avions le xml 
+//exemple =>
+// const obj = {
+//     firstname: "jean",
+//     lastName: "bon",
+//     age: 45
+// }
+// console.log(JSON.stringify(obj));
+//le json veut dire Javascript Object Notation
+// console.log(JSON.parse('{"firstname":"jean","lastname": "bon","age": 15}'))
+
+// const a = {
+//     name: "Toto",
+//     foo: {
+//         bar: "zoo"
+//     }
+// };
+
+//shallow: veut dire superficielle
+// const b = Object.assign({}, a);
+// const c = { ...a};
+
+//deep
+// const b = JSON.parse(JSON.stringify(a));
+
+// b.name = "Tata";
+// b.foo.bar = 123;
+
+// console.log(a);
+// console.log(b);
+
+// déclarer des fonctions et l'expression des fonctions
+//declaration
+// function func() {
+//     console.log('func exec');
+// }
+// func();
+//expression
+// const fn = function func2(){
+//     console.log('func2 exec');
+// }
+// fn();
+// console.log(fn.name);
+
+// function func(param){
+//     console.log(param.toUpperCase());
+// }
+//invoquer une fonction
+// func('param'); 
+// const name = ["jack", "paul", "Charly"];
+// const newNames = ["marc", ...name,"charlene"];
+// console.log(name, newNames);
+
+//opérateur Rest
+// function add(){
+    // console.log(arguments);//version oldschool
+//     let total = 0;
+//     for(let i = 0 ; i < arguments.length;i++){
+//         total +=  arguments[i];
+//     }
+//     console.log(total);
+// }
+// add(1, 2, 3, 4);
+
+// function add(...numbers){
+    //nouvelle version
+//     let total = 0;
+//     for(let i = 0 ; i < numbers.length;i++){
+//         total +=  numbers[i];
+//     }
+//     console.log(total);
+// }
+// add(1, 2, 3, 4);
+
+// function operation(operateur, ...numbers){
+//     let total = 0;
+//     if(operateur === "+"){
+//         for (let i = 0 ; i < numbers.length;i++){
+//             total +=  numbers[i];
+//         }
+//     }
+//     return total;
+// }
+    
+// const total = operation("+", 1, 2, 3, 4);
+// console.log(total);
+
+// function additionner(a,b){
+//     return a +b;
+// }
+// console.log(additionner(5,7));
+
+// function a() {
+//     console.log(foo);
+// }
+
+// function b() {
+//     let foo = 1;
+//     a();
+// }
+
+// let foo =2;
+// b();
+
+// function b(){
+//     function a(){
+//         console.log(foo);
+//     }
+//     let foo = 1;
+//     a();
+// }
+// let foo = 2;
+// b();
 
 
 
